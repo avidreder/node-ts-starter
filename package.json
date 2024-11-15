@@ -1,11 +1,11 @@
 {
-	"name": "nodejs-typescript-modern-starter",
+	"name": "my-cli",
 	"version": "1.0.0",
-	"main": "dist/src/index.js",
+	"exports": "./dist/index.js",
+	"type": "module",
 	"typings": "dist/src/index.d.ts",
 	"bin": {
-		"nodejs-typescript-modern-starter": "dist/src/index.js",
-		"ntms": "dist/src/index.js"
+		"my-cli": "dist/index.js"
 	},
 	"repository": {
 		"type": "git",
@@ -29,16 +29,16 @@
 	"license": "MIT",
 	"scripts": {
 		"bundle": "rimraf dist && esbuild --outdir=dist --sourcemap --bundle --platform=node --target=node20.10.0 ./src/index.ts",
-		"check": "bunx biome check --write .",
+		"check": "yarn biome check --write .",
 		"compile": "tsc",
 		"compile:watch": "tsc -w",
 		"dev": "nodemon --watch src --watch test --ext ts,json --exec 'yarn bundle && yarn start'",
-		"debug": "bunx bundle && node --enable-source-maps --inspect-brk ./dist/index.js",
+		"debug": "yarn bundle && node --enable-source-maps --inspect-brk ./dist/index.js",
 		"debug:test": "node --inspect-brk ./node_modules/.bin/jest --runInBand .",
-		"format": "bunx biome format --write",
-		"format:check": "bunx biome format",
-		"lint": "bunx biome lint --write",
-		"lint:check": "bunx biome lint",
+		"format": "yarn biome format --write",
+		"format:check": "yarn biome format",
+		"lint": "yarn biome lint --write",
+		"lint:check": "yarn biome lint",
 		"start": "node --enable-source-maps ./dist/index.js",
 		"test": "jest --runInBand ."
 	},
@@ -62,5 +62,5 @@
 		"rimraf": "5.0.10",
 		"typescript": "5.6.3"
 	},
-	"packageManager": "yarn@4.2.2"
+	"packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447"
 }
