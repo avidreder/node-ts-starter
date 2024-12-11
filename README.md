@@ -59,8 +59,8 @@ running with a new project in no time. It provides:
 
 ## Quickstart
 
-- Clone the repo `git clone git@github.com:xddq/nodejs-typescript-modern-starter`
-- Remove the .git folder `cd nodejs-typescript-modern-starter && rm -rf .git`
+- Clone the repo `git clone git@github.com:avidreder/node-ts-starter`
+- Remove the .git folder `cd node-ts-starter && rm -rf .git`
 - (optional) Update the package.json name, author, keywords, etc..
 - Set up your own git folder and create your first commit. Run `git init && git
 add . && git commit -am "initial commit"`
@@ -109,6 +109,7 @@ test --ext ts,json --exec 'yarn debug:test'`
   auto-fixable and reports the rest of them to you.
 - `yarn lint:check` -> Checks for linting errors using eslint. This is typically
   only invoked by the CI/CD pipeline.
+- `yarn check` -> Checks and autofixes both formatting and linting
 - `yarn start` -> Runs the code. This only works if the code was bundled before ;).
 - `yarn test` -> Tests your codebase. Basic tests are created for both major
   common approaches of putting tests beside the source code as well as putting
