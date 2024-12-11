@@ -6,7 +6,7 @@
 	"typings": "dist/src/index.d.ts",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/avidreder/node-ts-starter.git",
+		"url": "git+https://github.com/avidreder/node-ts-starter.git"
 	},
 	"keywords": [
 		"nodejs",
